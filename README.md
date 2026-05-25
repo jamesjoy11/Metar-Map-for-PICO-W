@@ -2,7 +2,7 @@
 Ported the Metar Map from Phillip Reuker to run on a PICO W
 
 I took the Code from Pillip Reuker's metar Map and ported it over the Raspberry Pi PICO W.  Since it does not have an OS, it took an extensive amount of rewriting and error handling.  I hope I have figured out most of the potential problems.
-I will not recount the entire build process, but I will explain how to install and connect to the PICO Pi.  
+I will not recount the entire build process, but I will explain how to install and connect to the PICO Pi.  Note that I removed support for the external Display.  I think that would be a bridge to far for the Pico.
 
 Software Setup
 
