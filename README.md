@@ -9,5 +9,7 @@ Obviously download all of the files put in your local directory.  First edit the
 After you get all of this ready, you can connect your pico, but make sure it has micropython loaded.  If it does not yet, you will need to do so.  There is lots of online help if you need it.  After, connect your pico pi to your computer with the USB cable and in Thonny go to configure interpreter.  Again, lots of online help if needed.
 At this point, transfer all of the files.  
 
-Next, connect 
+Next, connect your plug power for the LEDs to VBUS pin, Negative to GND and signal to GP0.  After plugging in your LEDs, connect Power from a micro USB USB power supply and everything should come on and you should have weather.  
+
+If things don't work, you can connect back to your computer and from Thonny type CTL-C or click STOP until you have control, and trouble shoot.
 
