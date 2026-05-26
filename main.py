@@ -15,10 +15,7 @@ TIMEZONEOFFSET = -5  					#Your Timezone offset from UTC
 
 #DO NOT Modify anything below this Line!!!!!!!
 ntptime.settime()
-currenthour = (time.localtime()[3]) + TIMEZONEOFFSET
-if currenthour < 0: currenthour = currenthour +24
-if currenthour > 24: currenthour = currenthour - 24
-print ("current Hour",currenthour)
+
 with open("airports") as f:
     airports = f.readlines()
 airports = [x.strip() for x in airports]
@@ -26,6 +23,10 @@ f.close
 j=0
 errorcounter = 0
 while (True):
+    currenthour = (time.localtime()[3]) + TIMEZONEOFFSET
+    if currenthour < 0: currenthour = currenthour +24
+    if currenthour > 24: currenthour = currenthour - 24
+    print ("current Hour",currenthour)
     if (currenthour) > MORNING_ON and (currenthour) < EVENING_OFF:
         if lanconnect.checkconnection():
             try:
