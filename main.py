@@ -27,7 +27,7 @@ while (True):
     if currenthour < 0: currenthour = currenthour +24
     if currenthour > 24: currenthour = currenthour - 24
     print ("current Hour",currenthour)
-    if (currenthour) > MORNING_ON and (currenthour) < EVENING_OFF:
+    if (currenthour) >= MORNING_ON and (currenthour) < EVENING_OFF:
         if lanconnect.checkconnection():
             try:
                  metarmap.metar(airports)
