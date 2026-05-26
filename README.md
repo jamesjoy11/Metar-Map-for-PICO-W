@@ -15,7 +15,7 @@ At this point, transfer all of the files.
 # Hardware Setup
 
 Next, connect your plug power for the LEDs to VBUS pin, Negative to GND and signal to GP0.  You could also connect signal to a different pin, just update in the Metarmap.py file.
-After plugging in your LEDs, connect Power from a micro USB USB power supply and everything should come on and you should have weather.  
+After plugging in your LEDs, connect Power from a micro USB 2.5 amp power supply and everything should come on and you should have weather.  
 
 If things don't work, you can connect back to your computer and from Thonny type CTL-C or click STOP until you have control, and trouble shoot.
 
