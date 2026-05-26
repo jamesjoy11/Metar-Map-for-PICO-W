@@ -4,7 +4,7 @@ Ported the Metar Map from Phillip Reuker to run on a PICO W.  His basic instruct
 I took his Code and ported it over the Raspberry Pi PICO W.  Since it does not have an OS, it took an extensive amount of rewriting and error handling.  I hope I have figured out most of the potential problems.
 I will not recount the entire build process, but I will explain how to install and connect to the PICO Pi.  Note that I removed support for the external Display.  I think that would be a bridge to far for the Pico.
 
-Software Setup
+# Software Setup
 
 You will need to install Thonny and configure for your computer. No SSH need.  You will need a micro USB cable to connect to your computer.   
 Obviously download all of the files put in your local directory.  First edit the lanconnect.py to input your nework paramters.  You can also change the hostname if your prefer.  Next put in a list of the airports in the airports file.  Note, no file extension so you will need to do this in notepad or some text editor.  Put in "NULL" for LEDs you need to skip.  Next, if you need to or prefer, edit the items in the metarmap.py file.  This would be preferences for the colors, wind, etc.  You may also need to change the RGB order for your type of LEDs.  Make sure the number of LEDs match what is in your airports file.   Finally, you will need to edit the main.py for your timezone offset and on/off preferences for going dark at night.  Do not modify the other files.
