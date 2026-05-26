@@ -27,10 +27,10 @@ while (True):
     if currenthour < 0: currenthour = currenthour +24
     if currenthour > 24: currenthour = currenthour - 24
     print ("current Hour",currenthour)
-    if (currenthour) >= MORNING_ON and (currenthour) < EVENING_OFF:
+    if (currenthour) >= MORNING_ON and (currenthour) < EVENING_OFF:  #Check to run the script or sleep
         if lanconnect.checkconnection():
             try:
-                 metarmap.metar(airports)
+                 metarmap.metar(airports)              #Run the main script in a try to catch errors
             except:
                 print ("couldn't Get Data from weather.gov")
                 errorcounter = errorcounter + 1
