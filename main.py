@@ -22,15 +22,19 @@ airports = [x.strip() for x in airports]
 f.close
 j=0
 errorcounter = 0
+sleeping = False
 while (True):
     currenthour = (time.localtime()[3]) + TIMEZONEOFFSET
     if currenthour < 0: currenthour = currenthour +24
     if currenthour > 24: currenthour = currenthour - 24
     print ("current Hour",currenthour)
-    if (currenthour) >= MORNING_ON and (currenthour) < EVENING_OFF:  #Check to run the script or sleep
+    if (currenthour) >= MORNING_ON and (currenthour) < EVENING_OFF:
         if lanconnect.checkconnection():
+            if sleeping:		#setting time to NTP once a day
+                ntptime.settime()
+                sleeping = False
             try:
-                 metarmap.metar(airports)              #Run the main script in a try to catch errors
+                 metarmap.metar(airports)
             except:
                 print ("couldn't Get Data from weather.gov")
                 errorcounter = errorcounter + 1
@@ -47,6 +51,7 @@ while (True):
         j=j+1
         if j > 536870912:
             j=0
+        sleeping=True
     if errorcounter > 20:
         machine.reset()
     
