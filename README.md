@@ -10,7 +10,7 @@ You will need to install Thonny and configure for your computer. No SSH need.  Y
 Obviously download all of the files put in your local directory.  First edit the lanconnect.py to input your nework parameters.  You can also change the hostname if your prefer.  Next put in a list of the airports in the airports file.  Note, no file extension so you will need to do this in notepad or some text editor.  Put in "NULL" for LEDs you need to skip.  Next, if you need to or prefer, edit the items in the metarmap.py file.  This would be preferences for the colors, wind, etc.  You may also need to change the RGB order for your type of LEDs.  Make sure the number of LEDs match what is in your airports file, including the NULLs.   Finally, you will need to edit the main.py for your timezone offset and on/off preferences for going dark at night.  Do not modify the other files.
 
 After you get all of this ready, you can connect your pico, but make sure it has micropython loaded.  If it does not yet, you will need to do so.  Just hold down the Bootselect button when you plug it in and you will have a drive assigned.  You can use Thonny in configure interpreter to load the correct version of MicroPython. There is lots of online help if you need it.  After, connect your pico pi to your computer via the COM port just created by going into Thonny and go to configure interpreter.  Again, lots of online help if needed.
-At this point, transfer all of the files.  
+At this point, transfer all of the files (except for this README.md).  
 
 # Hardware Setup
 
