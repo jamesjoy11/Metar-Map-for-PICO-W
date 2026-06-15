@@ -14,6 +14,11 @@ TIMEZONEOFFSET = -5  					#Your Timezone offset from UTC
 
 
 #DO NOT Modify anything below this Line!!!!!!!
+
+sleep(5)
+
+lanconnect.connect()
+
 ntptime.settime()
 
 with open("airports") as f:
