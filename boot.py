@@ -1,3 +1,0 @@
-import lanconnect
-lanconnect.connect()
-
