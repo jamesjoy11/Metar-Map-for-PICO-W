@@ -7,7 +7,7 @@ I will not recount the entire build process, but I will explain how to install a
 # Software Setup
 
 You will need to install Thonny and configure for your computer. No SSH need.  You will need a micro USB cable to connect to your computer.   
-Obviously download all of the files put in your local directory.  First edit the lanconnect.py to input your nework parameters.  You can also change the hostname if your prefer.  Next put in a list of the airports in the airports file.  Note, no file extension so you will need to do this in notepad or some text editor.  Put in "NULL" for LEDs you need to skip.  Next, if you need to or prefer, edit the items in the metarmap.py file.  This would be preferences for the colors, wind, etc.  You may also need to change the RGB order for your type of LEDs.  Make sure the number of LEDs match what is in your airports file.   Finally, you will need to edit the main.py for your timezone offset and on/off preferences for going dark at night.  Do not modify the other files.
+Obviously download all of the files put in your local directory.  First edit the lanconnect.py to input your nework parameters.  You can also change the hostname if your prefer.  Next put in a list of the airports in the airports file.  Note, no file extension so you will need to do this in notepad or some text editor.  Put in "NULL" for LEDs you need to skip.  Next, if you need to or prefer, edit the items in the metarmap.py file.  This would be preferences for the colors, wind, etc.  You may also need to change the RGB order for your type of LEDs.  Make sure the number of LEDs match what is in your airports file, including the NULLs.   Finally, you will need to edit the main.py for your timezone offset and on/off preferences for going dark at night.  Do not modify the other files.
 
 After you get all of this ready, you can connect your pico, but make sure it has micropython loaded.  If it does not yet, you will need to do so.  Just hold down the Bootselect button when you plug it in and you will have a drive assigned.  You can use Thonny in configure interpreter to load the correct version of MicroPythone. There is lots of online help if you need it.  After, connect your pico pi to your computer via the COM port just created by going into Thonny and go to configure interpreter.  Again, lots of online help if needed.
 At this point, transfer all of the files.  
@@ -15,6 +15,18 @@ At this point, transfer all of the files.
 # Hardware Setup
 
 Next, connect your plug power for the LEDs to VBUS pin, Negative to GND and signal to GP0.  You could also connect signal to a different pin, just update in the Metarmap.py file.
+
+<img width="403" height="302" alt="IMG_5419" src="https://github.com/user-attachments/assets/5c910c81-6214-4048-a4ce-e3d47a1485b3" />
+
+
+For your LEDs I have a recommendation for a different type.  They are found here - 
+https://www.adafruit.com/product/4560?gad_source=1&gad_campaignid=21079227318&gbraid=0AAAAADx9JvRFjXng5P9AOwbEghfuzzMx3&gclid=CjwKCAjwxb7RBhA5EiwAQ-AAdAZUqAfRGOmQKeDuqoAo17yGCeB9FZjzuL8t1vLFad9tNEtR3EASIBoCVtgQAvD_BwE
+
+I just used a regular picture frame and drilled 1/2" holes in the cardboard backing.  I then hot glued the LEDs in the holes.  I also put the Pico Pi into a little case and hot glued it to the backing also.
+
+<img width="428" height="571" alt="IMG_5420" src="https://github.com/user-attachments/assets/cf52bd4e-8244-4dc5-8667-250b421a113b" />
+
+
 After plugging in your LEDs, connect Power from a micro USB 2.5 amp power supply and everything should come on and you should have weather.  
 
 If things don't work, you can connect back to your computer and from Thonny type CTL-C or click STOP until you have control, and trouble shoot.
